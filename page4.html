@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yheart - My Special Question</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="proposal-container">
+
+        <div class="proposal-heart">♥️</div>
+
+        <p class="proposal-small-title">
+            Tay dr lay ko ayin mae pa ya zay nw
+        </p>
+
+        <h1>Chit ya tae athae</h1>
+
+        <div class="proposal-question">
+
+            <h2>Tay&Thae atutu shi nay lox ya ma lr?</h2>
+
+            <p>
+                Kyoe srr ya own mae achay anay phyit nay lox pr athae.D htet kg tax maykwum ko may naing fox kyoe zar mr pr
+		byr.Kyoe srr nay maz kar hla lay mr atutu shi nay pay naing ma lr hin athae?
+            </p>
+
+        </div>
+
+        <!-- YES AND NO BUTTONS -->
+
+        <div class="proposal-buttons">
+
+            <button class="yes-button" onclick="showAnswer('yes')">
+                YES ♥️
+            </button>
+
+            <button class="no-button" onclick="showAnswer('no')">
+                NO
+            </button>
+
+        </div>
+
+        <!-- ANSWER MESSAGE -->
+
+        <div class="answer-message" id="answerMessage">
+
+            <p id="answerText"></p>
+
+        </div>
+
+        <footer>
+            Chit tl nw athae <span class="gold-heart">♥️</span> | Mwachi
+        </footer>
+
+    </div>
+
+
+    <script>
+    function showAnswer(answer) {
+
+        const messageBox = document.getElementById("answerMessage");
+        const messageText = document.getElementById("answerText");
+
+        if (answer === "yes") {
+
+            messageText.innerHTML =
+                "Tay lay ph ko akhu pel sat lite nw.Tay ka thae ph ko myaw nay mr. Chit tal thae! ♥️";
+
+        } else {
+
+            messageText.innerHTML =
+                `Thae pya tax latt sut lo myo Aphyu yaung lay ko ma ,latt sut lay ka set nay ya ml.P yin 
+    awarr yaung stone lay thone p kyimyindaing nyazay nr ka panchan mr propose chin khae tr pr.Taung pan 
+    pr tl athae yel, phyit ma lr khae lox. ♥️`;
+
+        }
+
+        messageBox.style.display = "block";
+
+    }
+</script>
+
+</body>
+</html>
