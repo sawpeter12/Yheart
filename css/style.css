@@ -1,0 +1,518 @@
+/* =================================
+   YHEART - MAIN DESIGN
+   ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF8DF;
+    color: #343434;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 45px 30px;
+    text-align: center;
+
+    background: #FFF8DF;
+    border: 2px solid #F5D547;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 40px rgba(180, 145, 40, 0.15);
+}
+
+/* HEART */
+
+.heart {
+    font-size: 70px;
+    color: #E8B923;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* HEADINGS */
+
+h1 {
+    font-size: 48px;
+    color: #D9AC32;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #D9AC32;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+.memory-text {
+    color: #725B1C;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.main-button {
+    display: inline-block;
+    background: #F5D547;
+    color: #343434;
+
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #D9AC32;
+    transform: translateY(-3px);
+}
+
+/* HIDDEN MESSAGE */
+
+.hidden-message {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+
+    background: #FFF1B8;
+    border: 1px solid #F5D547;
+    border-radius: 15px;
+
+    color: #725B1C;
+    line-height: 2;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 40px;
+    color: #9B843D;
+    font-size: 14px;
+}
+
+/* GOLD HEART TEXT */
+
+.gold-heart {
+    color: #E8B923;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 35px 18px;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .heart {
+        font-size: 55px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .hidden-message {
+        font-size: 15px;
+        padding: 18px;
+    }
+}
+/* TWO PHOTO LAYOUT */
+
+.photo-box {
+    width: 100%;
+    margin: 20px auto;
+    padding: 12px;
+    background: #FFF1B8;
+    border: 1px solid #F5D547;
+    border-radius: 15px;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.photo-caption {
+    padding: 12px 5px 5px;
+    color: #8A702C;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+    .photo-box {
+        display: inline-block;
+        width: 47%;
+        vertical-align: top;
+        margin: 15px 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-box img {
+        height: 230px;
+    }
+}
+
+/* CLICKABLE PHOTO LINKS */
+/*
+.photo-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.photo-link:hover .photo-box {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(180, 145, 40, 0.2);
+    transition: 0.3s;
+}
+*/
+
+/* =================================
+   PAGE 2 - HAPPY MEMORIES
+   ================================= */
+
+.memory-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 35px 20px;
+    text-align: center;
+    background: #FFF8DF;
+    border: 2px solid #F5D547;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(180, 145, 40, 0.12);
+}
+
+.memory-intro {
+    max-width: 550px;
+    margin: 0 auto 35px;
+    color: #777777;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* MEMORY CARD */
+
+.memory-card {
+    background: #FFFFFF;
+    border: 1px solid #F5D547;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 30px auto;
+    max-width: 650px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(180, 145, 40, 0.08);
+    transition: 0.3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(180, 145, 40, 0.15);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.memory-content {
+    padding: 25px;
+}
+
+.memory-number {
+    color: #C39A24;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.memory-content h2 {
+    margin-top: 12px;
+    color: #B38A20;
+    font-size: 23px;
+}
+
+.memory-content p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-top: 15px;
+}
+
+/* ENDING MESSAGE */
+
+.memory-ending {
+    margin: 45px auto 30px;
+    max-width: 600px;
+    padding: 30px 20px;
+    background: #FFF1B8;
+    border-radius: 20px;
+}
+
+.memory-ending h2 {
+    color: #B38A20;
+    margin: 15px 0;
+}
+
+.memory-ending p {
+    color: #725B1C;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.ending-small {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* NAVIGATION */
+
+.memory-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .memory-container {
+        margin: 10px auto;
+        padding: 30px 14px;
+    }
+
+    .memory-intro {
+        font-size: 15px;
+    }
+
+    .memory-card img {
+        height: 240px;
+    }
+
+    .memory-content {
+        padding: 20px;
+    }
+
+    .memory-content h2 {
+        font-size: 20px;
+    }
+
+    .memory-content p {
+        font-size: 15px;
+    }
+
+    .memory-ending {
+        padding: 25px 15px;
+    }
+
+}
+
+/* PAGE 4 - SIMPLE MARRIAGE PROPOSAL */
+
+.proposal-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 50px 25px;
+    text-align: center;
+
+    background: #FFF8DF;
+    border: 2px solid #F5D547;
+    border-radius: 28px;
+
+    box-shadow: 0 10px 40px rgba(180, 145, 40, 0.15);
+}
+
+.proposal-heart {
+    color: #E8B923;
+    font-size: 75px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.proposal-small-title {
+    color: #B38A20;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.proposal-container h1 {
+    color: #D9AC32;
+    font-size: 40px;
+}
+
+.proposal-question {
+    margin: 45px auto 30px;
+}
+
+.proposal-question h2 {
+    color: #B38A20;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.proposal-question p {
+    color: #725B1C;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* YES AND NO BUTTONS */
+
+.proposal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.yes-button,
+.no-button {
+    min-width: 130px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.yes-button {
+    background: #F5D547;
+    color: #343434;
+    border: none;
+}
+
+.yes-button:hover {
+    background: #D9AC32;
+    transform: translateY(-4px);
+}
+
+.no-button {
+    background: #FFFFFF;
+    color: #725B1C;
+    border: 1px solid #D9AC32;
+}
+
+.no-button:hover {
+    background: #FFF1B8;
+    transform: translateY(-4px);
+}
+
+/* ANSWER MESSAGE */
+
+.answer-message {
+    display: none;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+
+    background: #FFF1B8;
+    border: 1px solid #F5D547;
+    border-radius: 18px;
+
+    color: #725B1C;
+    font-size: 17px;
+    line-height: 1.9;
+
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .proposal-container {
+        margin: 20px auto;
+        padding: 40px 18px;
+    }
+
+    .proposal-container h1 {
+        font-size: 34px;
+    }
+
+    .proposal-question h2 {
+        font-size: 28px;
+    }
+
+    .proposal-buttons {
+        gap: 12px;
+    }
+
+    .yes-button,
+    .no-button {
+        min-width: 115px;
+    }
+
+}
